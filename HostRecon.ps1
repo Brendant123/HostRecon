@@ -342,6 +342,10 @@ function Invoke-HostRecon{
             if ($ps.ProcessName -like "kvoop")
                 {
                 Write-Output ("Possible Unknown DLP process " + $ps.ProcessName + " is running.")
+                }
+	    if ($ps.ProcessName -like "avp")
+                {
+                Write-Output ("Possible Kaspersky AV process " + $ps.ProcessName + " is running.")
                 }                       
             }
     Write-Output "`n"
